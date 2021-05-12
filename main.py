@@ -26,7 +26,8 @@ while True:
                           '9 - Dictionaries\n'
                           '10 - "for" loop\n'
                           '11 - Functions\n'
-                          '12 - Local and global variables\n')
+                          '12 - Local and global variables\n'
+                          '13 - Verification work\n')
                     )
     if u_input == 'exit':
         break
@@ -34,8 +35,14 @@ while True:
         # Check user's input is a number and import Practice
         try:
             u_choice = int(u_input)
-            if not 0 < u_choice < 13:
+            if not 0 < u_choice < 14:
                 print(f'There is no Practice with number {u_choice}')
+            elif u_choice == 13:
+                if 'verification' in sys.modules:
+                    del sys.modules['verification']
+                print(f"Verification work\n"
+                      f"-----------------")
+                __import__('verification')
             else:
                 import_practice()
         except ValueError:
