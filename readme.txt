@@ -13,3 +13,4 @@ practice_9 - Dictionaries
 practice_10 - "for" loop
 practice_11 - Functions
 practice_12 - Local and global variables
+verification - Verification work
